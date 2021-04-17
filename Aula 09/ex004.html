@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começando o DOM</title>
+    <style>
+        body{
+            background-color: rgb(219, 200, 219);
+            color: rgb(3, 20, 5);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim</div><br>
+    
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        
+        
+        window.document.write('Está escrito assim: '+ p1.innerText) // O innerText puxa somente o texto puro, sem nenhuma tag filha
+        window.document.write('<br><br>Está escrito assim: '+ p1.innerHTML) // Já o innerHTML puxa o texto como ele está, com as tags filha(s)
+        
+        /*
+        var corpo = window.document.body
+        corpo.style.background = 'pink'
+        */
+        
+        // querySelector
+        /*
+        var vari = window.document.querySelector('div.msg')
+        vari.style.color = 'red'
+        */
+
+        // getElementsByClassName
+        /*
+        var d1 = window.document.getElementsByClassName('msg')[0]
+        d1.innerText = 'Teste'
+        */
+
+    </script>
+</body>
+</html>
